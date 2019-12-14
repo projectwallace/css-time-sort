@@ -32,8 +32,6 @@ const result = ['3s', '2ms'].sort(sortFn)
 // => ['2ms', '3s']
 ```
 
-Description
-
 ## Related projects
 
 - **[css-unit-sort](https://github.com/cssstats/cssstats/tree/master/packages/css-unit-sort)**<br>**Sort css values no matter the unit.**
