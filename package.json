@@ -1,0 +1,32 @@
+{
+  "name": "@bartveneman/PACKAGE_NAME",
+  "description": "PACKAGE_DESCRIPTION",
+  "version": "0.0.0",
+  "homepage": "https://www.projectwallace.com/oss",
+  "repository": "PACKAGE_REPOSITORY",
+  "issues": "PACKAGE_ISSUES",
+  "license": "MIT",
+  "author": "Bart Veneman",
+  "keywords": [
+    "PACKAGE_KEYWORD"
+  ],
+  "scripts": {
+    "test": "eslint ./src/**/*.js ./test/**/*.js && nyc ava test/**"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=8.0"
+  },
+  "devDependencies": {
+    "@bartveneman/eslint-config-bv": "0.0.2",
+    "ava": "^2.4.0",
+    "eslint": "^6.4.0",
+    "nyc": "^14.1.1"
+  },
+  "eslintConfig": {
+    "extends": "@bartveneman/eslint-config-bv"
+  }
+}
