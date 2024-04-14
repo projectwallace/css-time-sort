@@ -12,16 +12,16 @@ npm install css-time-sort
 ## Usage
 
 ```js
-const cssTimeSort = require("css-time-sort");
-const result = cssTimeSort(["3s", "2ms"]);
+import { convert, compare } from "css-time-sort";
 
-// OR:
+let result = ["3s", "2ms"].sort(compare); // ["2ms", "3s"]
 
-const { sortFn } = require("css-time-sort");
-const result = ["3s", "2ms"].sort(sortFn);
-
-// RESULT:
-// => ['2ms', '3s']
+// Converting time-like values
+convert("1s"); // 1000
+convert("1ms"); // 1
+convert("+2ms"); // 2
+convert("var(--foo)"); // Number.MAX_SAFE_INTEGER - 1
+convert("bars"); // Number.MAX_SAFE_INTEGER
 ```
 
 ## Notes
