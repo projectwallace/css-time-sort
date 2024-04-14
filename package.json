@@ -19,6 +19,9 @@
 		"delay",
 		"array"
 	],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"test": "uvu",
 		"lint": "oxlint",
@@ -28,7 +31,7 @@
 	"exports": {
 		"require": "./dist/css-time-sort.cjs",
 		"default": "./dist/css-time-sort.modern.js",
-		"types": "./dist/css-time-sort.d.ts"
+		"types": "./dist/index.d.ts"
 	},
 	"types": "./dist/index.d.ts",
 	"devDependencies": {
