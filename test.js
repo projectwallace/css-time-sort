@@ -74,12 +74,14 @@ test_convert('exotic notations (s)', () => {
 	assert.is(convert('2e3s'), 2_000_000)
 	assert.is(convert('+1e1s'), 10_000)
 	assert.is(convert('-3e5s'), -300_000_000)
+	assert.is(convert('-3.4e-2s'), -34)
 })
 
 test_convert('exotic notations (ms)', () => {
 	assert.is(convert('2e3ms'), 2_000)
 	assert.is(convert('+1e1ms'), 10)
 	assert.is(convert('-3e5ms'), -300_000)
+	assert.is(convert('-3.4e-2ms'), -.034)
 })
 
 test_convert('converts `var(--foo)`', () => {
