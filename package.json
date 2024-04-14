@@ -1,10 +1,11 @@
 {
 	"name": "css-time-sort",
-	"description": "Sort an array of CSS <time> values.",
-	"version": "1.0.0",
-	"homepage": "https://www.projectwallace.com/oss",
-	"repository": "https://github.com/bartveneman/css-time-sort",
-	"issues": "https://github.com/bartveneman/css-time-sort/issues",
+	"description": "Sort an array of CSS <time> values",
+	"version": "2.0.0",
+	"type": "module",
+	"homepage": "https://github.com/projectwallace/css-time-sort",
+	"repository": "https://github.com/projectwallace/css-time-sort",
+	"issues": "https://github.com/projectwallace/css-time-sort/issues",
 	"license": "MIT",
 	"author": "Bart Veneman",
 	"keywords": [
@@ -14,26 +15,26 @@
 		"sort",
 		"time",
 		"duration",
+		"animation",
 		"delay",
 		"array"
 	],
 	"scripts": {
-		"test": "eslint ./src/**/*.js ./test/**/*.js && nyc ava test/**"
+		"test": "uvu",
+		"lint": "oxlint",
+		"check": "tsc --noEmit",
+		"build": "microbundle"
 	},
-	"main": "./src/index.js",
-	"files": [
-		"src"
-	],
-	"engines": {
-		"node": ">=8.0"
+	"exports": {
+		"require": "./dist/css-time-sort.cjs",
+		"default": "./dist/css-time-sort.modern.js",
+		"types": "./dist/css-time-sort.d.ts"
 	},
+	"types": "./dist/index.d.ts",
 	"devDependencies": {
-		"@bartveneman/eslint-config-bv": "0.0.2",
-		"ava": "^2.4.0",
-		"eslint": "^6.4.0",
-		"nyc": "^14.1.1"
-	},
-	"eslintConfig": {
-		"extends": "@bartveneman/eslint-config-bv"
+		"microbundle": "^0.15.1",
+		"oxlint": "^0.2.17",
+		"typescript": "^5.4.5",
+		"uvu": "^0.5.6"
 	}
 }
