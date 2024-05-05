@@ -16,8 +16,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install --ignore-scripts --no-audit
       - name: Lint JS
         run: npx --yes oxlint@latest -D perf
+      - name: Build package
+        run: npm run build
       - name: Lint package
         run: npx --yes publint
   types:
