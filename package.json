@@ -32,9 +32,9 @@
 		"build": "microbundle"
 	},
 	"exports": {
+		"types": "./dist/index.d.ts",
 		"require": "./dist/css-time-sort.cjs",
-		"default": "./dist/css-time-sort.modern.js",
-		"types": "./dist/index.d.ts"
+		"default": "./dist/css-time-sort.modern.js"
 	},
 	"types": "./dist/index.d.ts",
 	"devDependencies": {
