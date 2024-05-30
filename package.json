@@ -37,9 +37,9 @@
 	},
 	"source": "index.js",
 	"types": "./dist/index.d.ts",
-	"main": "./dist/index.umd.cjs",
-	"module": "./dist/index.js",
-	"unpkg": "./dist/index.umd.cjs",
+	"main": "./dist/css-time-sort.umd.cjs",
+	"module": "./dist/css-time-sort.js",
+	"unpkg": "./dist/css-time-sort.umd.cjs",
 	"devDependencies": {
 		"typescript": "^5.4.5",
 		"uvu": "^0.5.6",
