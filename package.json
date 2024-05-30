@@ -27,20 +27,23 @@
 	],
 	"scripts": {
 		"test": "uvu",
-		"lint": "oxlint",
 		"check": "tsc --noEmit",
-		"build": "microbundle"
+		"build": "vite build"
 	},
 	"exports": {
 		"types": "./dist/index.d.ts",
-		"require": "./dist/css-time-sort.cjs",
-		"default": "./dist/css-time-sort.modern.js"
+		"require": "./dist/css-time-sort.umd.cjs",
+		"default": "./dist/css-time-sort.js"
 	},
+	"source": "index.js",
 	"types": "./dist/index.d.ts",
+	"main": "./dist/css-time-sort.umd.cjs",
+	"module": "./dist/css-time-sort.js",
+	"unpkg": "./dist/css-time-sort.umd.cjs",
 	"devDependencies": {
-		"microbundle": "^0.15.1",
-		"oxlint": "^0.2.17",
 		"typescript": "^5.4.5",
-		"uvu": "^0.5.6"
+		"uvu": "^0.5.6",
+		"vite": "^5.2.12",
+		"vite-plugin-dts": "^3.9.1"
 	}
 }
