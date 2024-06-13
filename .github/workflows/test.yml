@@ -24,13 +24,21 @@ jobs:
       - name: Install dependencies
         run: npm install --ignore-scripts --no-audit --no-fund
       - name: Lint JS
-        run: npx --yes oxlint@latest -D perf
+        run: npx oxlint@latest -D perf
       - name: Check types
         run: npm run check
       - name: Build package
         run: npm run build
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Lint package
-        run: npx --yes publint
+        run: npx publint
+      - name: Run tests
+        run: npx c8 --reporter=lcov npm test
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
   test:
     name: Unit tests
     runs-on: ubuntu-latest
