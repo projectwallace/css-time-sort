@@ -1,7 +1,7 @@
 {
 	"name": "css-time-sort",
 	"description": "Sort an array of CSS <time> values",
-	"version": "2.0.2",
+	"version": "3.0.0-alpha.1",
 	"type": "module",
 	"homepage": "https://github.com/projectwallace/css-time-sort",
 	"repository": {
@@ -30,16 +30,15 @@
 		"check": "tsc --noEmit",
 		"build": "vite build"
 	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"main": "./dist/css-time-sort.js",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		"types": "./dist/index.d.ts",
-		"require": "./dist/css-time-sort.umd.cjs",
 		"default": "./dist/css-time-sort.js"
 	},
-	"source": "index.js",
-	"types": "./dist/index.d.ts",
-	"main": "./dist/css-time-sort.umd.cjs",
-	"module": "./dist/css-time-sort.js",
-	"unpkg": "./dist/css-time-sort.umd.cjs",
 	"devDependencies": {
 		"@codecov/vite-plugin": "^1.9.0",
 		"c8": "^10.1.3",
