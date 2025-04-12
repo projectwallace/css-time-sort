@@ -1,7 +1,7 @@
 {
 	"name": "css-time-sort",
 	"description": "Sort an array of CSS <time> values",
-	"version": "3.0.0-alpha.0",
+	"version": "3.0.0-alpha.1",
 	"type": "module",
 	"homepage": "https://github.com/projectwallace/css-time-sort",
 	"repository": {
