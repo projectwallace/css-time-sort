@@ -12,17 +12,17 @@ npm install css-time-sort
 ## Usage
 
 ```js
-import { convert, compare } from "css-time-sort";
+import { convert, compare } from 'css-time-sort'
 
 // Using `compare` will sort an array from short to long times:
-let result = ["3s", "2ms"].sort(compare); // ["2ms", "3s"]
+let result = ['3s', '2ms'].sort(compare) // ["2ms", "3s"]
 
 // Converting time-like values converts the input to ms:
-convert("1s"); // 1000
-convert("1ms"); // 1
-convert("+2ms"); // 2
-convert("var(--foo)"); // Number.MAX_SAFE_INTEGER - 1
-convert("bars"); // Number.MAX_SAFE_INTEGER
+convert('1s') // 1000
+convert('1ms') // 1
+convert('+2ms') // 2
+convert('var(--foo)') // Number.MAX_SAFE_INTEGER - 1
+convert('bars') // Number.MAX_SAFE_INTEGER
 ```
 
 ## Notes
