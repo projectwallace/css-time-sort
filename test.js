@@ -22,9 +22,9 @@ test_convert('float values (s)', () => {
 
 test_convert('float values (ms)', () => {
 	// Floats (with leading, and non-leading digits)
-	assert.is(convert('.1ms'), .1)
-	assert.is(convert('.01ms'), .01)
-	assert.is(convert('0.1ms'), .1)
+	assert.is(convert('.1ms'), 0.1)
+	assert.is(convert('.01ms'), 0.01)
+	assert.is(convert('0.1ms'), 0.1)
 	assert.is(convert('2.625ms'), 2.625)
 })
 
@@ -64,10 +64,10 @@ test_convert('negative floats (s)', () => {
 })
 
 test_convert('negative floats (ms)', () => {
-	assert.is(convert('-.1ms'), -.1)
-	assert.is(convert('-.2ms'), -.2)
-	assert.is(convert('-.200ms'), -.2)
-	assert.is(convert('-3.14ms'), -3.140)
+	assert.is(convert('-.1ms'), -0.1)
+	assert.is(convert('-.2ms'), -0.2)
+	assert.is(convert('-.200ms'), -0.2)
+	assert.is(convert('-3.14ms'), -3.14)
 })
 
 test_convert('exotic notations (s)', () => {
@@ -81,7 +81,7 @@ test_convert('exotic notations (ms)', () => {
 	assert.is(convert('2e3ms'), 2_000)
 	assert.is(convert('+1e1ms'), 10)
 	assert.is(convert('-3e5ms'), -300_000)
-	assert.is(convert('-3.4e-2ms'), -.034)
+	assert.is(convert('-3.4e-2ms'), -0.034)
 })
 
 test_convert('converts `var(--foo)`', () => {
@@ -106,12 +106,7 @@ test_compare('it sorts time', () => {
 	assert.equal(['2s', '1s'].sort(compare), ['1s', '2s'])
 	assert.equal(['2ms', '1ms'].sort(compare), ['1ms', '2ms'])
 	assert.equal(['.002s', '10ms'].sort(compare), ['.002s', '10ms'])
-	assert.equal(['-1s', '1s', '-2ms', '2s'].sort(compare), [
-		'-1s',
-		'-2ms',
-		'1s',
-		'2s'
-	])
+	assert.equal(['-1s', '1s', '-2ms', '2s'].sort(compare), ['-1s', '-2ms', '1s', '2s'])
 })
 
 test_compare('it sorts same-value ms before s', () => {
