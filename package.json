@@ -40,7 +40,7 @@
 	"devDependencies": {
 		"@codecov/rollup-plugin": "^2.0.1",
 		"c8": "^11.0.0",
-		"oxfmt": "^0.46.0",
+		"oxfmt": "^0.47.0",
 		"oxlint": "^1.51.0",
 		"publint": "^0.3.18",
 		"tsdown": "^0.21.1",
