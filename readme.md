@@ -6,13 +6,13 @@
 ## Installation
 
 ```sh
-npm install css-time-sort
+npm install @projectwallace/css-time-sort
 ```
 
 ## Usage
 
 ```js
-import { convert, compare } from 'css-time-sort'
+import { convert, compare } from '@projectwallace/css-time-sort'
 
 // Using `compare` will sort an array from short to long times:
 let result = ['3s', '2ms'].sort(compare) // ["2ms", "3s"]
