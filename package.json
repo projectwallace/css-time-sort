@@ -1,5 +1,5 @@
 {
-	"name": "css-time-sort",
+	"name": "@projectwallace/css-time-sort",
 	"version": "3.0.2",
 	"description": "Sort an array of CSS <time> values",
 	"keywords": [
