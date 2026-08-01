@@ -42,7 +42,7 @@
 		"lint": "oxlint; oxfmt --check"
 	},
 	"devDependencies": {
-		"@codecov/rollup-plugin": "^2.0.1",
+		"@projectwallace/preset-oxlint": "^0.0.11",
 		"c8": "^12.0.0",
 		"oxfmt": "^0.61.0",
 		"oxlint": "^1.51.0",
@@ -56,8 +56,5 @@
 		"pnpm": ">=11.0.0"
 	},
 	"packageManager": "pnpm@11.1.1",
-	"pnpm": {
-		"onlyBuiltDependencies": []
-	},
 	"issues": "https://github.com/projectwallace/css-time-sort/issues"
 }

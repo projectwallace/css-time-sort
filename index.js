@@ -1,3 +1,6 @@
+const MS_REGEX = /\d+ms$/i
+const S_REGEX = /\d+s$/i
+
 /**
  * Compare two CSS <time> values
  * @param {string} a
@@ -13,7 +16,7 @@ export function compare(a, b) {
 
 	// If times are the same, put ms in front of s
 	if (A === B) {
-		return /\d+ms$/i.test(a) ? -1 : 1
+		return MS_REGEX.test(a) ? -1 : 1
 	}
 
 	return A - B
@@ -31,11 +34,11 @@ export function compare(a, b) {
  * convert('bars') // Number.MAX_SAFE_INTEGER
  */
 export function convert(time) {
-	if (/\d+ms$/i.test(time)) {
+	if (MS_REGEX.test(time)) {
 		return Number(time.slice(0, time.length - 2))
 	}
 
-	if (/\d+s$/i.test(time)) {
+	if (S_REGEX.test(time)) {
 		return Number(time.slice(0, time.length - 1)) * 1000
 	}
 
